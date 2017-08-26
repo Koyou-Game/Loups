@@ -3,12 +3,16 @@ using System.Collections;
 
 public class SquarePlayerController : MonoBehaviour
 {
-
+	private KeyboardInputController inputController;
 	// Use this for initialization
 	void Start ()
 	{
-	
+		inputController = GetComponent<KeyboardInputController> ();
+		inputController.SetCallback (
+			HandleCallMove
+		);
 	}
+
 
 	void FixedUpdate ()
 	{
@@ -20,5 +24,10 @@ public class SquarePlayerController : MonoBehaviour
 	void Update ()
 	{
 	
+	}
+
+	void HandleCallMove (float horizontal, float vertical)
+	{
+
 	}
 }
