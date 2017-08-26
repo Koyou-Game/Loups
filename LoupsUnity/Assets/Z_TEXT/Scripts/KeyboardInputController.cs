@@ -12,10 +12,8 @@ public class KeyboardInputController : MonoBehaviour
 	{
 	
 	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
+
+	void FixedUpdate(){
 		float horizontal = 0;  	//Used to store the horizontal move direction.
 		float vertical = 0;		//Used to store the vertical move direction.
 
@@ -25,6 +23,11 @@ public class KeyboardInputController : MonoBehaviour
 		if (callMove != null) {
 			callMove (horizontal, vertical);
 		}
+	}
+	
+	// Update is called once per frame
+	void Update ()
+	{
 	}
 
 	public void SetCallback (
