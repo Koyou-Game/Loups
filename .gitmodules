@@ -1,0 +1,9 @@
+[submodule "Assets/Dependencies/Koyou/Kogine/Side"]
+	path = Assets/Dependencies/Koyou/Kogine/Side
+	url = git@github.com:Koyou-Game/Kogine.Side.git
+[submodule "Assets/Dependencies/Koyou/Commons"]
+	path = Assets/Dependencies/Koyou/Commons
+	url = git@github.com:Koyou-Game/Unity.Common.git
+[submodule "Assets/Dependencies/Koyou/Frameworks"]
+	path = Assets/Dependencies/Koyou/Frameworks
+	url = git@github.com:Koyou-Game/Unity.Frameworks.git
