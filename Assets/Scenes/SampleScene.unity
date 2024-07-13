@@ -228,8 +228,8 @@ GameObject:
   - component: {fileID: 1712603805}
   - component: {fileID: 1712603804}
   - component: {fileID: 1712603803}
-  - component: {fileID: 1712603802}
   - component: {fileID: 1712603801}
+  - component: {fileID: 1712603806}
   m_Layer: 0
   m_Name: Lily
   m_TagString: Untagged
@@ -250,10 +250,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 0}
-  UpdateMode: 1
+  updateMode: 1
   state:
     gravity: -30
-    speed: 5
+    velocity: {x: 0, y: 0}
 --- !u!4 &1712603800
 Transform:
   m_ObjectHideFlags: 0
@@ -282,18 +282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7475a8b247e54196b4691a7dccdf5618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1712603802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712603798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb8bfc18ebe34f6b8beec38a0a18c9e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1712603803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,7 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state:
     gravity: -30
-    speed: 5
+    velocity: {x: 0, y: 0}
 --- !u!61 &1712603804
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -381,6 +369,21 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1712603806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712603798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10736ad55eb14fd48b35fadf1e0de456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  speed: 5
+  acceleration: 10
 --- !u!1 &1860390908
 GameObject:
   m_ObjectHideFlags: 0
