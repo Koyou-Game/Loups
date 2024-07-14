@@ -376,10 +376,17 @@ MonoBehaviour:
   rigidbody: {fileID: 0}
   collider: {fileID: 0}
   updateMode: 1
+  lastState:
+    grounded: 0
+    lastGroundedTime: -3.4028235e+38
+    groundDistance: 3.4028235e+38
+    position: {x: 0, y: 0}
+    velocity: {x: 0, y: 0}
   state:
     grounded: 0
     lastGroundedTime: -3.4028235e+38
     groundDistance: 3.4028235e+38
+    position: {x: 0, y: 0}
     velocity: {x: 0, y: 0}
 --- !u!4 &1712603800
 Transform:
@@ -425,6 +432,7 @@ MonoBehaviour:
     grounded: 0
     lastGroundedTime: -3.4028235e+38
     groundDistance: 3.4028235e+38
+    position: {x: 0, y: 0}
     velocity: {x: 0, y: 0}
 --- !u!61 &1712603804
 BoxCollider2D:
@@ -505,7 +513,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712603798}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10736ad55eb14fd48b35fadf1e0de456, type: 3}
   m_Name: 
@@ -548,7 +556,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712603798}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eff7c4516593467087376956d2dd3ef2, type: 3}
   m_Name: 
