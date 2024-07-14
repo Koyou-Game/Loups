@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: lily
     originalName: 
-    pivot: {x: 0.5, y: 0.53333336}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -129,7 +129,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 6
-      height: 15
+      height: 16
     spriteID: 2512c9d0284329d419aa1cdcb8fe985d
     spriteBone: []
     spriteOutline: []
@@ -141,7 +141,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: lily_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0.53333336}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -149,7 +149,7 @@ ScriptedImporter:
       x: 18
       y: 4
       width: 6
-      height: 15
+      height: 16
     spriteID: da4319227d3b11b4bac9f2f1b1060cb0
     spriteBone: []
     spriteOutline: []
@@ -174,7 +174,7 @@ ScriptedImporter:
         x: 9
         y: 8
         width: 6
-        height: 15
+        height: 16
       spriteId: 2512c9d0284329d419aa1cdcb8fe985d
     - name: lily_Frame_1
       frameIndex: 1
@@ -182,7 +182,7 @@ ScriptedImporter:
         x: 9
         y: 8
         width: 6
-        height: 15
+        height: 16
       spriteId: da4319227d3b11b4bac9f2f1b1060cb0
     linkedCells: []
     parentIndex: -1
