@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429171d6de054311bf4c7ed9ed6e255c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: {x: 0, y: -10}
+  gravity: {x: 0, y: -50}
   detectRayCount: 4
   contactFilter:
     useTriggers: 1
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff7c4516593467087376956d2dd3ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 2.125
+  jumpHeight: 4.125
 --- !u!114 &1712603809
 MonoBehaviour:
   m_ObjectHideFlags: 0
