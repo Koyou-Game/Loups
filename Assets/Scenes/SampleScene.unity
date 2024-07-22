@@ -816,8 +816,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  mode: 0
-  acceleration: 20
+  accelerationTime: 0.12
+  decelerationTime: 0.06
 --- !u!114 &1712603807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -872,7 +872,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  acceleration: 20
+  accelerationTime: 0.12
+  decelerationTime: 0.06
 --- !u!114 &1712603810
 MonoBehaviour:
   m_ObjectHideFlags: 0
