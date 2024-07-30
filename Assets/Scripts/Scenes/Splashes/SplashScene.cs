@@ -1,13 +1,24 @@
+using Cysharp.Threading.Tasks;
+using Koyou.Commons;
 using Koyou.Frameworks;
 
 namespace Scenes.Splashes
 {
     public class SplashScene : BaseScene
     {
-        // Start is called before the first frame update
-        void Start() { }
+        #region BaseScene
 
-        // Update is called once per frame
-        void Update() { }
+        public override async UniTask Enter()
+        {
+            await base.Enter();
+            Log.N($"Entered {nameof(SplashScene)}");
+        }
+
+        public override async UniTask Exit()
+        {
+            await base.Exit();
+        }
+
+        #endregion
     }
 }
