@@ -5,7 +5,7 @@ using Object = UnityEngine.Object;
 
 namespace Scenes.Splashes
 {
-    public class SplashState : AppState
+    public class SplashAppState : AppState
     {
         #region AppState
 
