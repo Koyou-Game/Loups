@@ -1,5 +1,8 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System;
+using Cysharp.Threading.Tasks;
 using Koyou.Frameworks;
+using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
 
 namespace Scenes.Lobbies
 {
@@ -11,7 +14,10 @@ namespace Scenes.Lobbies
         {
             await base.Enter();
 
-            // todo
+            await SceneManager.LoadSceneAsync("Lobby");
+
+            var scene = Object.FindFirstObjectByType<LobbyScene>() ?? throw new Exception($"{nameof(LobbyScene)} not found");
+            await scene.Enter();
         }
 
         public override async UniTask Exit()
