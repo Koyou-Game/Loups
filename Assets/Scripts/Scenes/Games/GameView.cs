@@ -6,11 +6,11 @@ using UnityEngine;
 
 namespace Scenes.Games
 {
-    public class GameView : DataView<Game>
+    public class GameView : DataView<IGame>
     {
-        #region DataView<Game>
+        #region DataView<IGame>
 
-        public override async UniTask LoadData(Game data)
+        public override async UniTask LoadData(IGame data)
         {
             await base.LoadData(data);
             await levelController.Load();

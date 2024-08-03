@@ -810,6 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b65ecd15b15d4d1087327537fe961e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameView: {fileID: 987423484}
 --- !u!1001 &1292379040
 PrefabInstance:
   m_ObjectHideFlags: 0

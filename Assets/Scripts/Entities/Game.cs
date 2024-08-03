@@ -1,6 +1,8 @@
 ﻿namespace Entities
 {
-    public class Game
+    public interface IGame { }
+
+    public class Game:IGame
     {
         
     }
