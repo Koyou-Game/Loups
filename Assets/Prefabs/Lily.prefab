@@ -234,6 +234,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpHeight: 2.125
+  variableJumpHeight: 4.125
+  jumpBufferTime: 0.12
+  coyoteTime: 0.06
 --- !u!114 &9052601139548211839
 MonoBehaviour:
   m_ObjectHideFlags: 0
