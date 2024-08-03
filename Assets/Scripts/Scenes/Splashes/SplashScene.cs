@@ -1,7 +1,7 @@
 using Cysharp.Threading.Tasks;
 using Koyou.Commons;
 using Koyou.Frameworks;
-using Scenes.Games;
+using Scenes.Lobbies;
 
 namespace Scenes.Splashes
 {
@@ -14,7 +14,7 @@ namespace Scenes.Splashes
             await base.Enter();
             Log.N($"Entered {nameof(SplashScene)}");
             // todo splash operates
-            AppStateMachine.Instance.EnqueueState(new GameAppState());
+            AppStateMachine.Instance.EnqueueState(new LobbyAppState());
         }
 
         public override async UniTask Exit()
