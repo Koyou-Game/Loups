@@ -56,9 +56,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d872cfa26f0949c9b8a8d9f298d81c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 0}
-  collider: {fileID: 0}
   spriteRenderer: {fileID: 6743611583403647349}
+  animator: {fileID: 9212416373750611033}
   updateMode: 1
   lastState:
     grounded: 0
@@ -73,8 +72,20 @@ MonoBehaviour:
     position: {x: 0, y: 0}
     velocity: {x: 0, y: 0}
   lastAnimateState:
+    alive: 1
+    idle: 1
+    walking: 0
+    jumping: 0
+    speedX: 0
+    speedY: 0
     flipX: 0
   animateState:
+    alive: 1
+    idle: 1
+    walking: 0
+    jumping: 0
+    speedX: 0
+    speedY: 0
     flipX: 0
 --- !u!50 &414114714758828697
 Rigidbody2D:
@@ -179,6 +190,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state:
+    alive: 1
+    idle: 1
+    walking: 0
+    jumping: 0
+    speedX: 0
+    speedY: 0
     flipX: 0
 --- !u!114 &3838355555800428162
 MonoBehaviour:
@@ -380,5 +397,10 @@ Transform:
 --- !u!212 &6743611583403647349 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3626916397498700004, guid: 443873fd588cffd478afded838adb2bd, type: 3}
+  m_PrefabInstance: {fileID: 8053414968815055249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &9212416373750611033 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1160356261127867848, guid: 443873fd588cffd478afded838adb2bd, type: 3}
   m_PrefabInstance: {fileID: 8053414968815055249}
   m_PrefabAsset: {fileID: 0}
