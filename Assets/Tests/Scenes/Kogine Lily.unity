@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 1712603804}
   - component: {fileID: 1712603803}
   - component: {fileID: 1712603811}
-  - component: {fileID: 1712603801}
+  - component: {fileID: 1712603812}
   - component: {fileID: 1712603806}
   - component: {fileID: 1712603809}
   - component: {fileID: 1712603807}
@@ -707,18 +707,6 @@ Transform:
   - {fileID: 2035442305}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1712603801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712603798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7475a8b247e54196b4691a7dccdf5618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1712603803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,6 +853,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpHeight: 2.125
+  variableJumpHeight: 4.125
+  jumpBufferTime: 0.12
+  coyoteTime: 0.06
 --- !u!114 &1712603809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,6 +916,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state:
     flipX: 0
+--- !u!114 &1712603812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712603798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c05aed80f4143ef9e7f905558267c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1721697115
 GameObject:
   m_ObjectHideFlags: 0
