@@ -17,5 +17,7 @@ MonoBehaviour:
   windup: 0.2
   cooldown: 0.8
   grounded: 1
-  preStepKeys:
+  preSteps:
   - slash_1
+  triggerInputs:
+  - attack

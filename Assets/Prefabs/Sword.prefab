@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5308864336975268197}
   - component: {fileID: 7798386397435209406}
+  - component: {fileID: 4514124974101743229}
+  - component: {fileID: 351334440160355207}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -45,6 +47,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6624f0365a214871a56c0fa34b664b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4514124974101743229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363547299078750928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debe247972d74444a4c28880b51554ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &351334440160355207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363547299078750928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01b31aba30f467c9ab7c28ac55ee372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSteps:
+  - {fileID: 11400000, guid: 1051b922dc5f18f4f931dae09530b260, type: 2}
+  - {fileID: 11400000, guid: 2603dcb95f4e0d645bdf4e739cfc1945, type: 2}
 --- !u!1001 &2482895557637866658
 PrefabInstance:
   m_ObjectHideFlags: 0
