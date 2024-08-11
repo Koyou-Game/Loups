@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6624f0365a214871a56c0fa34b664b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1162035792455242822}
+  animator: {fileID: 3634243846235998570}
+  updateMode: 1
 --- !u!114 &4514124974101743229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +134,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 087e5f64e109ac74f97289e86b87d2b7, type: 3}
+--- !u!212 &1162035792455242822 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3626916397498700004, guid: 087e5f64e109ac74f97289e86b87d2b7, type: 3}
+  m_PrefabInstance: {fileID: 2482895557637866658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3634243846235998570 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1160356261127867848, guid: 087e5f64e109ac74f97289e86b87d2b7, type: 3}
+  m_PrefabInstance: {fileID: 2482895557637866658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5701699537024777135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 087e5f64e109ac74f97289e86b87d2b7, type: 3}
