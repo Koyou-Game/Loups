@@ -74,9 +74,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01b31aba30f467c9ab7c28ac55ee372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationSteps:
-  - {fileID: 11400000, guid: 1051b922dc5f18f4f931dae09530b260, type: 2}
-  - {fileID: 11400000, guid: 2603dcb95f4e0d645bdf4e739cfc1945, type: 2}
+  combatSteps:
+  - {fileID: 11400000, guid: 1b7775c2389d28640bd400c0a5660e72, type: 2}
+  - {fileID: 11400000, guid: c94a8107f12334d448bc535739d9877b, type: 2}
 --- !u!1001 &2482895557637866658
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,7 +2,22 @@ fileFormatVersion: 2
 guid: 087e5f64e109ac74f97289e86b87d2b7
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: idle
+    second: {fileID: 7400000, guid: e2b6569a2ec4e214da45c82abe8594fd, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: slash_1
+    second: {fileID: 7400000, guid: f1abd901e86308d4d94cda23285158d6, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: splash_2
+    second: {fileID: 7400000, guid: 100206bf3cf6cb94dade85077b1bdfce, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +112,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638583005303484108
+  platformSettingsDirtyTick: 638592748495302321
   textureAssetName: 
   singleSpriteImportData:
   - name: 

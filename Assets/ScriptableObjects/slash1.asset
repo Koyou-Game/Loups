@@ -9,15 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a16992cd1c2c47cdb2ba82db20a87965, type: 3}
-  m_Name: Slash_2
+  m_Script: {fileID: 11500000, guid: c687aa75e463484aaf3ac75c9031d141, type: 3}
+  m_Name: slash1
   m_EditorClassIdentifier: 
-  key: slash_2
-  clip: {fileID: -5193340358615357101, guid: 087e5f64e109ac74f97289e86b87d2b7, type: 3}
-  windup: 0.2
-  cooldown: 0.8
-  grounded: 1
-  preSteps:
-  - slash_1
-  triggerInputs:
-  - attack
+  name: slash1
+  animatorOc: {fileID: 22100000, guid: c435ea4f8147f654480e5a0a40057a16, type: 2}
+  windup: 0
+  cooldown: 1
