@@ -83,6 +83,7 @@ MonoBehaviour:
   combatSteps:
   - {fileID: 11400000, guid: 1b7775c2389d28640bd400c0a5660e72, type: 2}
   - {fileID: 11400000, guid: c94a8107f12334d448bc535739d9877b, type: 2}
+  animationEventReceiver: {fileID: 6695289466031964787}
 --- !u!1001 &2482895557637866658
 PrefabInstance:
   m_ObjectHideFlags: 0
