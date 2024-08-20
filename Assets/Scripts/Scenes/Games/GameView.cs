@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using Entities;
 using Koyou.Frameworks;
-using Koyou.Kogine.Side.Cores;
+using Koyou.Kogine.Side.Levels;
 using UnityEngine;
 
 namespace Scenes.Games
