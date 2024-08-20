@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c687aa75e463484aaf3ac75c9031d141, type: 3}
-  m_Name: slash1
+  m_Name: slash_1
   m_EditorClassIdentifier: 
-  name: slash1
-  animatorOc: {fileID: 22100000, guid: c435ea4f8147f654480e5a0a40057a16, type: 2}
+  name: slash_1
   windup: 0
   cooldown: 1
