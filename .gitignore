@@ -999,3 +999,7 @@ Packages/packages-lock.json
 
 Assets/StreamingAssets/build_info
 Assets/StreamingAssets/build_info.meta
+
+# ignore BuildAssetBundles
+Assets/BuildAssetBundles
+Assets/BuildAssetBundles.meta
