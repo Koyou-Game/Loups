@@ -1,6 +1,7 @@
 ﻿using Entities;
 using Koyou.Commons;
 using Scenes.Games;
+using Sketches;
 using UnityEngine;
 
 namespace Scenes.Workshops
@@ -11,11 +12,18 @@ namespace Scenes.Workshops
 
         [SerializeField] private MapView mapView;
 
+        /// <summary>
+        /// todo test
+        /// </summary>
+        public ShapeSketcher shapeSketcher;
+
         #endregion
 
         public void Save(IWorkshop workshop)
         {
             Log.N($"Saving workshop {workshop}");
+
+            var sketch = shapeSketcher.ToSketch();
         }
     }
 }

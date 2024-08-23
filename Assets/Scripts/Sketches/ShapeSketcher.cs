@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using Sketches.Entities;
 
 namespace Sketches
 {
-    public class ShapeSketcher : MonoBehaviour
+    public class ShapeSketcher : PlacementSketcher
     {
-        
+        public override ISketch ToSketch()
+        {
+            return new ShapeSketch();
+        }
     }
 }
