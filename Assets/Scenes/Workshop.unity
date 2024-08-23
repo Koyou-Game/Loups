@@ -812,6 +812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapView: {fileID: 4721347264066017197}
+  shapeSketcher: {fileID: 0}
 --- !u!1 &1743305883
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,6 +956,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35cf2c549d04b4ea73259b8603b6f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sr: {fileID: 1743305884}
+  collider: {fileID: 1743305886}
 --- !u!224 &1776253617 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6051794023511413422, guid: 17c9cf0dfc4961f4c902dd4cf938665f, type: 3}
