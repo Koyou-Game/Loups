@@ -513,6 +513,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9dfb057b3934cc9933aaa72600b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelSketcher: {fileID: 1328748416}
+  workshopUiView: {fileID: 940390698}
 --- !u!1 &940390692
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,7 +778,7 @@ GameObject:
   - component: {fileID: 1328748415}
   - component: {fileID: 1328748416}
   m_Layer: 0
-  m_Name: MapSerializer
+  m_Name: LevelSketcher
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -809,6 +811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60c3695d331e415dae1c2d38be8aaae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapView: {fileID: 4721347264066017197}
 --- !u!1 &1743305883
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,6 +823,7 @@ GameObject:
   - component: {fileID: 1743305885}
   - component: {fileID: 1743305884}
   - component: {fileID: 1743305886}
+  - component: {fileID: 1743305887}
   m_Layer: 0
   m_Name: Terrain (16x16)_0
   m_TagString: Untagged
@@ -888,7 +892,7 @@ Transform:
   m_GameObject: {fileID: 1743305883}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.85, y: -3.58, z: 0}
+  m_LocalPosition: {x: -1.18, y: -1.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -939,6 +943,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1743305887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743305883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35cf2c549d04b4ea73259b8603b6f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1776253617 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6051794023511413422, guid: 17c9cf0dfc4961f4c902dd4cf938665f, type: 3}
@@ -1224,6 +1240,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8893525960706484917, guid: 75c9ed0388aef304dbe5abaa4ceedd82, type: 3}
   m_PrefabInstance: {fileID: 4721347264066017195}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4721347264066017197 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8182393591278531619, guid: 75c9ed0388aef304dbe5abaa4ceedd82, type: 3}
+  m_PrefabInstance: {fileID: 4721347264066017195}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37124338013d4eab98bacbc7d134d466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

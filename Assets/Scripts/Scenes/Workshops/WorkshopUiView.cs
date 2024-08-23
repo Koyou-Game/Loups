@@ -10,6 +10,8 @@ namespace Scenes.Workshops
 
         [SerializeField] private Button saveBtn;
 
+        public ICallback Callback { get; set; }
+
         private void Start()
         {
             saveBtn.onClick.AddListener(OnSaveBtnClick);
@@ -17,7 +19,13 @@ namespace Scenes.Workshops
 
         private void OnSaveBtnClick()
         {
-            Log.N($"OnSaveBtnClick");
+            // Log.N($"OnSaveBtnClick");
+            Callback?.OnSaveClick();
+        }
+
+        public interface ICallback
+        {
+            void OnSaveClick();
         }
 
         #endregion
