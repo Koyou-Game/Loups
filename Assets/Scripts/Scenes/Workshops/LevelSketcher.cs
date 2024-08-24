@@ -23,7 +23,9 @@ namespace Scenes.Workshops
             Log.N($"Saving workshop {workshop}");
 
             var sketch = shapeSketcher.ToSketch();
-            var json = JsonUtility.ToJson(sketch);
+            // Unity 自带的 JsonUtility 不好用
+            // var json = JsonUtility.ToJson(sketch);
+            var json = JsonUtil.SerializeObject(sketch);
             Log.N($"json:{json}");
         }
     }
