@@ -1,6 +1,7 @@
 ﻿using Entities;
 using Koyou.Commons;
 using Koyou.Frameworks;
+using Scenes.Games;
 using UnityEngine;
 
 namespace Scenes.Workshops
@@ -38,6 +39,7 @@ namespace Scenes.Workshops
             public void OnPlayClick()
             {
                 Log.N($"Called");
+                AppStateMachine.Instance.EnqueueState(new GameAppState());
             }
 
             public void OnSaveClick()
