@@ -8,13 +8,20 @@ namespace Scenes.Workshops
     {
         #region WorkshopUiView
 
+        [SerializeField] private Button playBtn;
         [SerializeField] private Button saveBtn;
 
         public ICallback Callback { get; set; }
 
         private void Start()
         {
+            playBtn.onClick.AddListener(OnPlayBtnClick);
             saveBtn.onClick.AddListener(OnSaveBtnClick);
+        }
+
+        private void OnPlayBtnClick()
+        {
+            Callback?.OnPlayClick();
         }
 
         private void OnSaveBtnClick()
@@ -25,6 +32,7 @@ namespace Scenes.Workshops
 
         public interface ICallback
         {
+            void OnPlayClick();
             void OnSaveClick();
         }
 

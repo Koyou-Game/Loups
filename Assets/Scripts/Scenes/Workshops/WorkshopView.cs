@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Koyou.Commons;
 using Koyou.Frameworks;
 using UnityEngine;
 
@@ -32,6 +33,11 @@ namespace Scenes.Workshops
             public WorkshopCallback(WorkshopView owner)
             {
                 this._owner = owner;
+            }
+
+            public void OnPlayClick()
+            {
+                Log.N($"Called");
             }
 
             public void OnSaveClick()
