@@ -513,8 +513,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9dfb057b3934cc9933aaa72600b2c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSketcher: {fileID: 0}
-  workshopUiView: {fileID: 0}
+  levelSketcher: {fileID: 1328748416}
+  workshopUiView: {fileID: 940390698}
 --- !u!1 &940390692
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280c98ba79974383aadac5480b07be8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveBtn: {fileID: 0}
+  saveBtn: {fileID: 1776253618}
 --- !u!1001 &1094148843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -834,6 +834,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6051794023511413422, guid: 17c9cf0dfc4961f4c902dd4cf938665f, type: 3}
   m_PrefabInstance: {fileID: 2736192338004321822}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1776253618 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7595842273329381940, guid: 17c9cf0dfc4961f4c902dd4cf938665f, type: 3}
+  m_PrefabInstance: {fileID: 2736192338004321822}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1828633626
 GameObject:
   m_ObjectHideFlags: 0

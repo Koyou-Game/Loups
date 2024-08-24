@@ -1,5 +1,6 @@
 ﻿using Entities;
 using Koyou.Commons;
+using Newtonsoft.Json;
 using Sketches;
 using UnityEngine;
 
@@ -23,7 +24,8 @@ namespace Scenes.Workshops
             Log.N($"Saving workshop {workshop}");
 
             var sketch = shapeSketcher.ToSketch();
-            
+            var json = JsonConvert.SerializeObject(sketch);
+            Log.N($"json:{json}");
         }
     }
 }
