@@ -1183,7 +1183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12152dd7647e41d2be0205583aa70d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: 
+  resourcePath: 
 --- !u!1 &4721347264066017200 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1203392288384035133, guid: 75c9ed0388aef304dbe5abaa4ceedd82, type: 3}
@@ -1201,7 +1201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 898c894b0a2f4fdb882a16d8b3a7f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: 
+  resourcePath: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

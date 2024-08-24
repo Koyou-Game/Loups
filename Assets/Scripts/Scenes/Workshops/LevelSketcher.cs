@@ -23,6 +23,7 @@ namespace Scenes.Workshops
             Log.N($"Saving workshop {workshop}");
 
             var sketch = shapeSketcher.ToSketch();
+            
         }
     }
 }
