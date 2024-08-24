@@ -5,7 +5,7 @@ namespace Sketches
 {
     public abstract class Sketcher : MonoBehaviour
     {
-        public string path;
+        public string resourcePath;
 
         public abstract ISketch ToSketch();
     }

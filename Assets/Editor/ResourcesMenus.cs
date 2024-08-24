@@ -38,7 +38,7 @@ public static class ResourcesMenus
                 resourcePath = resourcePath.Substring(0, resourcePath.LastIndexOf('.')); // 去掉扩展名
 
                 // 设置 Sketcher 的 path
-                sketcher.path = resourcePath;
+                sketcher.resourcePath = resourcePath;
                 EditorUtility.SetDirty(sketcher); // 标记对象为已修改，确保保存更改
 
                 Debug.Log("Sketcher.path set to: " + resourcePath);

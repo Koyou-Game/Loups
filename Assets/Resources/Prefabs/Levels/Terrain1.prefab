@@ -143,6 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35cf2c549d04b4ea73259b8603b6f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: Prefabs/Levels/Terrain1
+  resourcePath: Prefabs/Levels/Terrain1
   sr: {fileID: 2316456692019412103}
   collider: {fileID: 813189054302891789}

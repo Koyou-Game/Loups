@@ -10,15 +10,14 @@ namespace Sketches
     {
         [SerializeField] private SpriteRenderer sr;
         [SerializeField] private new Collider2D collider;
-        
+
         public override ISketch ToSketch()
         {
-            var sprite = sr.sprite;
-            // sprite.GetSpriteID()
-
-
-            // todo
-            return new ShapeSketch();
+            return new ShapeSketch
+            {
+                ResourcePath = resourcePath,
+                Position = transform.localPosition,
+            };
         }
     }
 }
