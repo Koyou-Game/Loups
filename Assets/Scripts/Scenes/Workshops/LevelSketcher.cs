@@ -23,11 +23,17 @@ namespace Scenes.Workshops
         {
             Log.N($"Saving workshop {workshop}");
 
-            var sketch = shapeSketcher.ToSketch();
-            // Unity 自带的 JsonUtility 不好用
-            // var json = JsonUtility.ToJson(sketch);
+            // var sketch = shapeSketcher.ToSketch();
+            // // Unity 自带的 JsonUtility 不好用
+            // // var json = JsonUtility.ToJson(sketch);
+            // var json = JsonUtil.SerializeObject(sketch);
+            // var shapeSketch = JsonUtil.DeserializeObject<ShapeSketch>(json);
+
+
+            var sketch = mapSketcher.ToSketch();
             var json = JsonUtil.SerializeObject(sketch);
-            var shapeSketch = JsonUtil.DeserializeObject<ShapeSketch>(json);
+            var shapeSketch = JsonUtil.DeserializeObject<MapSketch>(json);
+
             Log.N($"json:{json}");
         }
     }

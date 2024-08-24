@@ -33,7 +33,7 @@ namespace Scenes.Workshops
 
             public WorkshopCallback(WorkshopView owner)
             {
-                this._owner = owner;
+                _owner = owner;
             }
 
             public void OnPlayClick()
