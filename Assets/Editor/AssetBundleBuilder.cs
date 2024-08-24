@@ -4,7 +4,7 @@ using UnityEditor;
 
 public static class AssetBundleBuilder
 {
-    [MenuItem("Assets/Build AssetBundles")]
+    [MenuItem("Assets/Loups/Build AssetBundles")]
     static void BuildAllAssetBundles()
     {
         // 设置目标路径
