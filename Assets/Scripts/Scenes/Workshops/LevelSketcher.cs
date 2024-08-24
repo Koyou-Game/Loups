@@ -1,6 +1,5 @@
 ﻿using Entities;
 using Koyou.Commons;
-using Scenes.Games;
 using Sketches;
 using UnityEngine;
 
@@ -10,7 +9,7 @@ namespace Scenes.Workshops
     {
         #region MapSerializer
 
-        [SerializeField] private MapView mapView;
+        [SerializeField] private MapSketcher mapSketcher;
 
         /// <summary>
         /// todo test
