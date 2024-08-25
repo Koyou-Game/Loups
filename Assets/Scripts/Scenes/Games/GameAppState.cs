@@ -2,6 +2,7 @@
 using Cysharp.Threading.Tasks;
 using Entities;
 using Koyou.Frameworks;
+using Storages.Entities;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
 
@@ -31,7 +32,14 @@ namespace Scenes.Games
 
         #region GameAppState
 
-        
+        private LevelPath _levelPath;
+
+        public GameAppState() { }
+
+        public GameAppState(LevelPath levelPath)
+        {
+            _levelPath = levelPath;
+        }
 
         #endregion
     }

@@ -60,7 +60,7 @@ namespace Scenes.Workshops
                     level,
                     path
                 );
-                AppStateMachine.Instance.EnqueueState(new GameAppState());
+                AppStateMachine.Instance.EnqueueState(new GameAppState(levelPath));
             }
 
             public void OnSaveClick()
