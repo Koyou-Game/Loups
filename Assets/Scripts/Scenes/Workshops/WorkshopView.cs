@@ -2,6 +2,7 @@
 using Koyou.Commons;
 using Koyou.Frameworks;
 using Scenes.Games;
+using Sketches.Entities;
 using UnityEngine;
 
 namespace Scenes.Workshops
@@ -44,7 +45,11 @@ namespace Scenes.Workshops
 
             public void OnSaveClick()
             {
-                _owner.levelSketcher.Save(_owner.Data);
+                var sketch = _owner.levelSketcher.ToSketch();
+                var json = JsonUtil.SerializeObject(sketch);
+                var shapeSketch = JsonUtil.DeserializeObject<LevelSketch>(json);
+
+                Log.N($"json:{json}");
             }
         }
 
