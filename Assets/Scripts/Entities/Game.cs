@@ -1,9 +1,14 @@
-﻿namespace Entities
-{
-    public interface IGame { }
+﻿using Storages.Entities;
 
-    public class Game:IGame
+namespace Entities
+{
+    public interface IGame
     {
-        
+        LevelPath LevelPath { get; }
+    }
+
+    public class Game : IGame
+    {
+        public LevelPath LevelPath { get; init; }
     }
 }

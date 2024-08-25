@@ -18,8 +18,11 @@ namespace Scenes.Games
 
             await SceneManager.LoadSceneAsync("Game").ToUniTask();
             var scene = Object.FindFirstObjectByType<GameScene>() ?? throw new Exception($"{nameof(GameScene)} not found");
-            // todo 先用假数据
-            scene.Game = new Game();
+            
+            scene.Game = new Game
+            {
+                LevelPath = _levelPath,
+            };
             await scene.Enter();
         }
 
@@ -32,7 +35,7 @@ namespace Scenes.Games
 
         #region GameAppState
 
-        private LevelPath _levelPath;
+        private readonly LevelPath _levelPath;
 
         public GameAppState() { }
 
