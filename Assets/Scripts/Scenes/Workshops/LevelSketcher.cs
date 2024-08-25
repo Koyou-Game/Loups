@@ -30,9 +30,13 @@ namespace Scenes.Workshops
             // var shapeSketch = JsonUtil.DeserializeObject<ShapeSketch>(json);
 
 
-            var sketch = mapSketcher.ToSketch();
+            var sketch = new LevelSketch
+            {
+                MapSketch = (IMapSketch)mapSketcher.ToSketch(),
+            };
+
             var json = JsonUtil.SerializeObject(sketch);
-            var shapeSketch = JsonUtil.DeserializeObject<MapSketch>(json);
+            var shapeSketch = JsonUtil.DeserializeObject<LevelSketch>(json);
 
             Log.N($"json:{json}");
         }

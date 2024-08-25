@@ -9,6 +9,31 @@ namespace Utils
 {
     namespace Sketches.Entities
     {
+        public class LevelSketchConverter : JsonConverter
+        {
+            [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+            public static void Init()
+            {
+                Log.N($"Init LevelSketchConverter");
+                JsonUtil.AddConverter(new LevelSketchConverter());
+            }
+
+            public override bool CanConvert(Type objectType)
+            {
+                return objectType == typeof(ILevelSketch);
+            }
+
+            public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+            {
+                return serializer.Deserialize<LevelSketch>(reader);
+            }
+
+            public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+            {
+                serializer.Serialize(writer, value);
+            }
+        }
+
         public class MapSketchConverter : JsonConverter
         {
             [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -58,7 +83,7 @@ namespace Utils
                 serializer.Serialize(writer, value);
             }
         }
-        
+
         public class ShapeSketchConverter : JsonConverter
         {
             [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
