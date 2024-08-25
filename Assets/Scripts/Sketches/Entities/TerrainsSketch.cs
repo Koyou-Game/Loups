@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Sketches.Entities
 {
@@ -8,6 +9,7 @@ namespace Sketches.Entities
     }
     public class TerrainsSketch : PlacementSketch, ITerrainsSketch
     {
+        [JsonProperty(TypeNameHandling = TypeNameHandling.All)]
         public List<ISketch> Sketches { get; init; }
     }
 }
