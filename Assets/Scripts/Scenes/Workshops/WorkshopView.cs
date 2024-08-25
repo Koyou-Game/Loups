@@ -3,6 +3,7 @@ using Koyou.Commons;
 using Koyou.Frameworks;
 using Scenes.Games;
 using Sketches.Entities;
+using Storages;
 using UnityEngine;
 
 namespace Scenes.Workshops
@@ -45,11 +46,17 @@ namespace Scenes.Workshops
 
             public void OnSaveClick()
             {
-                var sketch = _owner.levelSketcher.ToSketch();
+                var sketch = (ILevelSketch)_owner.levelSketcher.ToSketch();
                 var json = JsonUtil.SerializeObject(sketch);
-                var shapeSketch = JsonUtil.DeserializeObject<LevelSketch>(json);
 
                 Log.N($"json:{json}");
+
+#if UNITY_EDITOR
+                // test
+                var levelSketch = JsonUtil.DeserializeObject<LevelSketch>(json);
+#endif
+
+                LevelRepository.Save(sketch, "Workshop", "TempLevel");
             }
         }
 
