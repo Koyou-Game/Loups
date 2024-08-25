@@ -4,6 +4,7 @@ using Koyou.Frameworks;
 using Scenes.Games;
 using Sketches.Entities;
 using Storages;
+using Storages.Entities;
 using UnityEngine;
 
 namespace Scenes.Workshops
@@ -40,7 +41,25 @@ namespace Scenes.Workshops
 
             public void OnPlayClick()
             {
-                Log.N($"Called");
+                var sketch = (ILevelSketch)_owner.levelSketcher.ToSketch();
+                var json = JsonUtil.SerializeObject(sketch);
+
+                Log.N($"json:{json}");
+
+#if UNITY_EDITOR
+                // test
+                var levelSketch = JsonUtil.DeserializeObject<LevelSketch>(json);
+#endif
+
+                var story = "Workshop";
+                var level = "TempPlayLevel";
+                var path = LevelRepository.Save(sketch, story, level);
+
+                var levelPath = new LevelPath(
+                    story,
+                    level,
+                    path
+                );
                 AppStateMachine.Instance.EnqueueState(new GameAppState());
             }
 

@@ -7,7 +7,14 @@ namespace Storages
 {
     public static class LevelRepository
     {
-        public static void Save(ILevelSketch sketch, string story, string level)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sketch"></param>
+        /// <param name="story"></param>
+        /// <param name="level"></param>
+        /// <returns>saved path</returns>
+        public static string Save(ILevelSketch sketch, string story, string level)
         {
             // 构建文件路径
             var directoryPath = Path.Combine(Application.persistentDataPath, story);
@@ -23,6 +30,8 @@ namespace Storages
 
             var json = JsonUtil.SerializeObject(sketch);
             File.WriteAllText(levelPath, json);
+
+            return levelPath;
         }
     }
 }
