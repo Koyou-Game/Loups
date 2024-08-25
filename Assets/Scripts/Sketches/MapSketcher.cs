@@ -7,7 +7,13 @@ namespace Sketches
     {
         #region PlacementSketcher
 
-        public override ISketch ToSketch() => new MapSketch();
+        public override ISketch ToSketch()
+        {
+            return new MapSketch
+            {
+                TerrainsSketch = (ITerrainsSketch)terrainsSketcher.ToSketch(),
+            };
+        }
 
         #endregion
 
