@@ -801,6 +801,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelController: {fileID: 451525892}
+--- !u!1 &1076856124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1076856125}
+  - component: {fileID: 1076856126}
+  m_Layer: 0
+  m_Name: LevelSketcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1076856125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076856124}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10, y: 8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1076856126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076856124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c3695d331e415dae1c2d38be8aaae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourcePath: 
+  mapSketcher: {fileID: 0}
 --- !u!1 &1177303283
 GameObject:
   m_ObjectHideFlags: 3
@@ -1515,6 +1561,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6091360328294959967, guid: eb44505b039c1094e9a6acff87f21add, type: 3}
     - target: {fileID: 1074314060221816089, guid: fb1e9cc00aa73f74c974e6a3d4bd505e, type: 3}
+      propertyPath: levelSketcher
+      value: 
+      objectReference: {fileID: 1076856126}
+    - target: {fileID: 1074314060221816089, guid: fb1e9cc00aa73f74c974e6a3d4bd505e, type: 3}
       propertyPath: checkpoints.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1583,5 +1633,6 @@ SceneRoots:
   - {fileID: 1270488302}
   - {fileID: 987423483}
   - {fileID: 8729567840650067560}
+  - {fileID: 1076856125}
   - {fileID: 1706898509}
   - {fileID: 597436755}
