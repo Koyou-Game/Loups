@@ -11,7 +11,7 @@ namespace Sketches
         [SerializeField] private SpriteRenderer sr;
         [SerializeField] private new Collider2D collider;
 
-        public override ISketch ToSketch()
+        public override ISketch SceneToSketch()
         {
             return new ShapeSketch
             {

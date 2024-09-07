@@ -4,6 +4,13 @@
 git clone --recurse-submodules git@github.com:Koyou-Game/Loups.git
 ```
 
+# 架构设计
+
+## Game Scene
+
+- LevelController
+    - LevelSketcher 这里负责加载地图
+
 # References
 
 - [Feel Tutorial : Getting Started](https://www.youtube.com/watch?v=gK_7etknD4k)

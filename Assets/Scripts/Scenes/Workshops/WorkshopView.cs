@@ -41,7 +41,7 @@ namespace Scenes.Workshops
 
             public void OnPlayClick()
             {
-                var sketch = (ILevelSketch)_owner.levelSketcher.ToSketch();
+                var sketch = (ILevelSketch)_owner.levelSketcher.SceneToSketch();
                 var json = JsonUtil.SerializeObject(sketch);
 
                 Log.N($"json:{json}");
@@ -65,7 +65,7 @@ namespace Scenes.Workshops
 
             public void OnSaveClick()
             {
-                var sketch = (ILevelSketch)_owner.levelSketcher.ToSketch();
+                var sketch = (ILevelSketch)_owner.levelSketcher.SceneToSketch();
                 var json = JsonUtil.SerializeObject(sketch);
 
                 Log.N($"json:{json}");

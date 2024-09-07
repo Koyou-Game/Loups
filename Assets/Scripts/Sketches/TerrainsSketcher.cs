@@ -7,7 +7,7 @@ namespace Sketches
 {
     public class TerrainsSketcher : PlacementSketcher
     {
-        public override ISketch ToSketch()
+        public override ISketch SceneToSketch()
         {
             var sketchers = new List<Sketcher>();
             // 遍历 root 的直接子物体（不包括更深层次的子物体）
@@ -22,7 +22,7 @@ namespace Sketches
 
             return new TerrainsSketch
             {
-                Sketches = sketchers.Select(sketcher => sketcher.ToSketch()).ToList(),
+                Sketches = sketchers.Select(sketcher => sketcher.SceneToSketch()).ToList(),
             };
         }
     }
