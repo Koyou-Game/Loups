@@ -1,6 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using Entities;
 using Koyou.Frameworks;
+using Storages.Entities;
 using UnityEngine;
 
 namespace Scenes.Games
@@ -16,7 +17,11 @@ namespace Scenes.Games
             {
                 Game = new Game
                 {
-                    // LevelPath = _levelPath,
+                    LevelPath = new LevelPath(
+                        "Workshop",
+                        "TempPlayLevel",
+                        "C:/Users/ayyk/AppData/LocalLow/DefaultCompany/Loups/Workshop/TempPlayLevel.json" // todo 之前 workshop保存的
+                    )
                 };
                 RunSceneFlow();
             }
