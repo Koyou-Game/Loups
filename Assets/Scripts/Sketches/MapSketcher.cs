@@ -15,6 +15,11 @@ namespace Sketches
             };
         }
 
+        public override void SketchToScene(ISketch sketch)
+        {
+            terrainsSketcher.SketchToScene(((IMapSketch)sketch).TerrainsSketch);
+        }
+
         #endregion
 
         #region MapSketcher

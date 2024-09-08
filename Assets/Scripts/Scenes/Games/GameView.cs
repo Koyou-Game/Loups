@@ -3,6 +3,7 @@ using Entities;
 using Koyou.Frameworks;
 using Koyou.Kogine.Side.Levels;
 using Scenes.Workshops;
+using Storages;
 using UnityEngine;
 
 namespace Scenes.Games
@@ -14,7 +15,9 @@ namespace Scenes.Games
         public override async UniTask LoadData(IGame data)
         {
             await base.LoadData(data);
-            // await levelSketcher.Load();
+            var (story, level, path) = data.LevelPath;
+            var sketch = LevelRepository.Load(path);
+            levelSketcher.SketchToScene(sketch);
             await levelController.Load();
         }
 

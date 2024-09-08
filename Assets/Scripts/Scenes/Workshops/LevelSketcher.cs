@@ -16,6 +16,11 @@ namespace Scenes.Workshops
             };
         }
 
+        public override void SketchToScene(ISketch sketch)
+        {
+            mapSketcher.SketchToScene(((ILevelSketch)sketch).MapSketch);
+        }
+
         #endregion
 
         #region MapSerializer

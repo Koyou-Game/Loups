@@ -14,5 +14,6 @@ namespace Sketches
         public string resourcePath;
 
         public abstract ISketch SceneToSketch();
+        public abstract void SketchToScene(ISketch sketch);
     }
 }

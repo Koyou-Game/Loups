@@ -49,6 +49,7 @@ namespace Scenes.Workshops
 #if UNITY_EDITOR
                 // test
                 var levelSketch = JsonUtil.DeserializeObject<LevelSketch>(json);
+                Log.N($"levelSketch:{levelSketch}");
 #endif
 
                 var story = "Workshop";

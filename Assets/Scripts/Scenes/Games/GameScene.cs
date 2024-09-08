@@ -12,10 +12,14 @@ namespace Scenes.Games
         private void Start()
         {
 #if UNITY_EDITOR
-            if (Game != null) return;
-
-            Game = new Game();
-            RunSceneFlow();
+            if (Game == null)
+            {
+                Game = new Game
+                {
+                    // LevelPath = _levelPath,
+                };
+                RunSceneFlow();
+            }
 #endif
         }
 
