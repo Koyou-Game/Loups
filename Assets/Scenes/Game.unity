@@ -815,6 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70bf015c83ea4a68b71bb5827d2a62b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelSketcher: {fileID: 1076856126}
   levelController: {fileID: 451525892}
 --- !u!1 &1076856124
 GameObject:
