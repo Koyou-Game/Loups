@@ -15,6 +15,7 @@ namespace Scenes.Games
 #if UNITY_EDITOR
             if (Game == null)
             {
+                // todo 之前 workshop保存的，这里用于测试
                 Game = new Game
                 {
                     LevelPath = new LevelPath(
