@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 341953127204037828}
   - component: {fileID: 4043552447908006976}
   - component: {fileID: 6480454562158138448}
+  - component: {fileID: 7215155583326823641}
   m_Layer: 5
   m_Name: PlacementItem
   m_TagString: Untagged
@@ -125,6 +126,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!114 &7215155583326823641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5044761707131259631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27320d390ffb45a2b53e57895af99ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sketcher: {fileID: 0}
 --- !u!1 &6859285291908602395
 GameObject:
   m_ObjectHideFlags: 0

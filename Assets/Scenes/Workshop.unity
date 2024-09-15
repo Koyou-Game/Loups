@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 46812092}
   - component: {fileID: 46812094}
   - component: {fileID: 46812095}
+  - component: {fileID: 46812096}
   m_Layer: 5
   m_Name: OperatePanel
   m_TagString: Untagged
@@ -237,6 +238,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 0
+--- !u!114 &46812096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46812090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ef89c834bb41f3b5cc7fdd18f4d2b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &173494477
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +916,7 @@ GameObject:
   - component: {fileID: 920650497}
   - component: {fileID: 920650499}
   - component: {fileID: 920650500}
+  - component: {fileID: 920650501}
   m_Layer: 5
   m_Name: TerrainsPanel
   m_TagString: Untagged
@@ -1005,6 +1019,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 0
+--- !u!114 &920650501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920650495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503255a3646149ccb8b546b90e397b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleGroup: {fileID: 920650500}
 --- !u!1 &940390692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,6 +1151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indicatorManager: {fileID: 1649655627}
+  operatesUiView: {fileID: 0}
   playBtn: {fileID: 1898349479}
   saveBtn: {fileID: 1776253618}
 --- !u!1001 &1094148843
@@ -1918,7 +1946,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1886182635246163781, guid: 475731356d6aab74a9dabe116f0e14bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7563511013398726888}
   m_SourcePrefab: {fileID: 100100000, guid: 475731356d6aab74a9dabe116f0e14bf, type: 3}
 --- !u!4 &4245134060423560478
 Transform:
@@ -2035,6 +2066,24 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7362900356771184608, guid: 475731356d6aab74a9dabe116f0e14bf, type: 3}
   m_PrefabInstance: {fileID: 3429861866567556429}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7563511013398726887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1886182635246163781, guid: 475731356d6aab74a9dabe116f0e14bf, type: 3}
+  m_PrefabInstance: {fileID: 3429861866567556429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7563511013398726888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563511013398726887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470936caf86146ca99b9e2d8aa8b762b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainsPanel: {fileID: 920650501}
 --- !u!1001 &7667155305713743383
 PrefabInstance:
   m_ObjectHideFlags: 0

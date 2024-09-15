@@ -14,6 +14,12 @@ namespace Scenes.Workshops
             indicatorManager.pointListener = new PointListener(this);
         }
 
+        private void Start()
+        {
+            playBtn.onClick.AddListener(OnPlayBtnClick);
+            saveBtn.onClick.AddListener(OnSaveBtnClick);
+        }
+
         #endregion
 
         #region WorkshopUiView
@@ -21,17 +27,14 @@ namespace Scenes.Workshops
         [SerializeField]
         private IndicatorManager indicatorManager;
 
-        [Space]
-        [SerializeField] private Button playBtn;
+        [Space] [SerializeField]
+        private OperatesUiView operatesUiView;
+
+        [Space] [SerializeField]
+        private Button playBtn;
         [SerializeField] private Button saveBtn;
 
         public ICallback Callback { get; set; }
-
-        private void Start()
-        {
-            playBtn.onClick.AddListener(OnPlayBtnClick);
-            saveBtn.onClick.AddListener(OnSaveBtnClick);
-        }
 
         private void OnPlayBtnClick()
         {
