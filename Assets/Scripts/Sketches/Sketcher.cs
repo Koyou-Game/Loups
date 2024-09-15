@@ -13,6 +13,8 @@ namespace Sketches
     {
         public string resourcePath;
 
+        public virtual void Duplicate(Vector3 positionSnap) { }
+
         public abstract ISketch SceneToSketch();
         public abstract void SketchToScene(ISketch sketch);
     }

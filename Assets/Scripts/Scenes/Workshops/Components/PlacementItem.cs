@@ -21,7 +21,7 @@ namespace Scenes.Workshops.Components
 
         #region PlacementItem
 
-        [SerializeField] private Sketcher sketcher;
+        [SerializeField] private Sketcher sketcherPfb;
 
         /// <summary>
         /// 如果要用到 IndicatorManager 再实现这个
@@ -30,7 +30,7 @@ namespace Scenes.Workshops.Components
 
         private class PointListener : IndicatorManager.IPointListener
         {
-            private PlacementItem _owner;
+            private readonly PlacementItem _owner;
 
             public PointListener(PlacementItem owner)
             {
@@ -42,6 +42,7 @@ namespace Scenes.Workshops.Components
             public void OnPointerDown(Vector2Int pos, Vector3 positionSnap)
             {
                 Log.N($"Called");
+                _owner.sketcherPfb.Duplicate(positionSnap);
             }
 
             public void OnPointerMove(Vector2Int pos, Vector3 positionSnap)
