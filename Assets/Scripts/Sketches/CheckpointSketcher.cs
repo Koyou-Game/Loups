@@ -8,7 +8,11 @@ namespace Sketches
 
         public override ISketch SceneToSketch()
         {
-            return new CheckpointSketch();
+            return new CheckpointSketch
+            {
+                ResourcePath = resourcePath,
+                Position = transform.localPosition,
+            };
         }
 
         public override void SketchToScene(ISketch sketch) { }
