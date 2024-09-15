@@ -1,4 +1,5 @@
-﻿using Sketches;
+﻿using Koyou.Indicators;
+using Sketches;
 using UnityEngine;
 
 namespace Scenes.Workshops.Components
@@ -9,5 +10,10 @@ namespace Scenes.Workshops.Components
     public class PlacementItem : MonoBehaviour
     {
         [SerializeField] private Sketcher sketcher;
+
+        /// <summary>
+        /// 如果要用到 IndicatorManager 再实现这个
+        /// </summary>
+        public IndicatorManager.IPointListener PointReceiver { get; protected set; }
     }
 }

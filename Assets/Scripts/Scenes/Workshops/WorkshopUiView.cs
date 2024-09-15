@@ -54,7 +54,7 @@ namespace Scenes.Workshops
 
         private class PointListener : IndicatorManager.IPointListener
         {
-            private WorkshopUiView _owner;
+            private readonly WorkshopUiView _owner;
 
             public PointListener(WorkshopUiView owner)
             {
@@ -66,30 +66,30 @@ namespace Scenes.Workshops
             public void OnPointerDown(Vector2Int pos, Vector3 positionSnap)
             {
                 // Log.N($"Called");
-                var selectedOperateItem = _owner.operatesUiView.SelectedOperateItem;
-                if (selectedOperateItem != null)
+                var operateItem = _owner.operatesUiView.SelectedOperateItem;
+                if (operateItem != null)
                 {
-                    selectedOperateItem.PointReceiver?.OnPointerDown(pos, positionSnap);
+                    operateItem.PointReceiver?.OnPointerDown(pos, positionSnap);
                 }
             }
 
             public void OnPointerMove(Vector2Int pos, Vector3 positionSnap)
             {
                 // Log.N($"Called");
-                var selectedOperateItem = _owner.operatesUiView.SelectedOperateItem;
-                if (selectedOperateItem != null)
+                var operateItem = _owner.operatesUiView.SelectedOperateItem;
+                if (operateItem != null)
                 {
-                    selectedOperateItem.PointReceiver?.OnPointerMove(pos, positionSnap);
+                    operateItem.PointReceiver?.OnPointerMove(pos, positionSnap);
                 }
             }
 
             public void OnPointerUp(Vector2Int pos, Vector3 positionSnap)
             {
                 // Log.N($"Called");
-                var selectedOperateItem = _owner.operatesUiView.SelectedOperateItem;
-                if (selectedOperateItem != null)
+                var operateItem = _owner.operatesUiView.SelectedOperateItem;
+                if (operateItem != null)
                 {
-                    selectedOperateItem.PointReceiver?.OnPointerUp(pos, positionSnap);
+                    operateItem.PointReceiver?.OnPointerUp(pos, positionSnap);
                 }
             }
 

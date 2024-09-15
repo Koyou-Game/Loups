@@ -28,7 +28,7 @@ namespace Scenes.Workshops.Components
 
         private class PointListener : IndicatorManager.IPointListener
         {
-            private TerrainsOperateItem _owner;
+            private readonly TerrainsOperateItem _owner;
 
             public PointListener(TerrainsOperateItem owner)
             {
@@ -40,16 +40,31 @@ namespace Scenes.Workshops.Components
             public void OnPointerDown(Vector2Int pos, Vector3 positionSnap)
             {
                 Log.N($"Called");
+                var placementItem = _owner.terrainsPanel.SelectedItem;
+                if (placementItem != null)
+                {
+                    placementItem.PointReceiver?.OnPointerDown(pos, positionSnap);
+                }
             }
 
             public void OnPointerMove(Vector2Int pos, Vector3 positionSnap)
             {
                 Log.N($"Called");
+                var placementItem = _owner.terrainsPanel.SelectedItem;
+                if (placementItem != null)
+                {
+                    placementItem.PointReceiver?.OnPointerMove(pos, positionSnap);
+                }
             }
 
             public void OnPointerUp(Vector2Int pos, Vector3 positionSnap)
             {
                 Log.N($"Called");
+                var placementItem = _owner.terrainsPanel.SelectedItem;
+                if (placementItem != null)
+                {
+                    placementItem.PointReceiver?.OnPointerUp(pos, positionSnap);
+                }
             }
 
             #endregion
