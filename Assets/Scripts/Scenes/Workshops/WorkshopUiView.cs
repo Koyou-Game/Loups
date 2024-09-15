@@ -1,5 +1,4 @@
-﻿using Koyou.Commons;
-using Koyou.Indicators;
+﻿using Koyou.Indicators;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -67,19 +66,31 @@ namespace Scenes.Workshops
             public void OnPointerDown(Vector2Int pos, Vector3 positionSnap)
             {
                 // Log.N($"Called");
-                _owner.operatesUiView.SelectedOperateItem?.PointReceiver?.OnPointerDown(pos, positionSnap);
+                var selectedOperateItem = _owner.operatesUiView.SelectedOperateItem;
+                if (selectedOperateItem != null)
+                {
+                    selectedOperateItem.PointReceiver?.OnPointerDown(pos, positionSnap);
+                }
             }
 
             public void OnPointerMove(Vector2Int pos, Vector3 positionSnap)
             {
                 // Log.N($"Called");
-                _owner.operatesUiView.SelectedOperateItem?.PointReceiver?.OnPointerMove(pos, positionSnap);
+                var selectedOperateItem = _owner.operatesUiView.SelectedOperateItem;
+                if (selectedOperateItem != null)
+                {
+                    selectedOperateItem.PointReceiver?.OnPointerMove(pos, positionSnap);
+                }
             }
 
             public void OnPointerUp(Vector2Int pos, Vector3 positionSnap)
             {
                 // Log.N($"Called");
-                _owner.operatesUiView.SelectedOperateItem?.PointReceiver?.OnPointerUp(pos, positionSnap);
+                var selectedOperateItem = _owner.operatesUiView.SelectedOperateItem;
+                if (selectedOperateItem != null)
+                {
+                    selectedOperateItem.PointReceiver?.OnPointerUp(pos, positionSnap);
+                }
             }
 
             #endregion

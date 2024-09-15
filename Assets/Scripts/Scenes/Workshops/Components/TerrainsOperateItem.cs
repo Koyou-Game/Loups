@@ -26,7 +26,7 @@ namespace Scenes.Workshops.Components
         [SerializeField]
         private TerrainsPanel terrainsPanel;
 
-        public class PointListener : IndicatorManager.IPointListener
+        private class PointListener : IndicatorManager.IPointListener
         {
             private TerrainsOperateItem _owner;
 
