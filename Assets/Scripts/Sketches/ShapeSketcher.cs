@@ -11,6 +11,12 @@ namespace Sketches
     {
         #region PlacementSketcher
 
+        public override Sketcher Duplicate(ContainerSketcher containerSketcher, Vector3 positionSnap)
+        {
+            var shapeSketcher = Instantiate(this, positionSnap, Quaternion.identity, containerSketcher.transform);
+            return shapeSketcher;
+        }
+
         public override ISketch SceneToSketch()
         {
             return new ShapeSketch

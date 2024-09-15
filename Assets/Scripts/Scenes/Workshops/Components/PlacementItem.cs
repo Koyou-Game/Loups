@@ -21,6 +21,9 @@ namespace Scenes.Workshops.Components
 
         #region PlacementItem
 
+        [SerializeField] private ContainerSketcher containerSketcher;
+
+        [Space]
         [SerializeField] private Sketcher sketcherPfb;
 
         /// <summary>
@@ -42,7 +45,7 @@ namespace Scenes.Workshops.Components
             public void OnPointerDown(Vector2Int pos, Vector3 positionSnap)
             {
                 Log.N($"Called");
-                _owner.sketcherPfb.Duplicate(positionSnap);
+                _owner.sketcherPfb.Duplicate(_owner.containerSketcher, positionSnap);
             }
 
             public void OnPointerMove(Vector2Int pos, Vector3 positionSnap)

@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Sketches
 {
-    public class TerrainsSketcher : PlacementSketcher
+    public class TerrainsSketcher : ContainerSketcher
     {
         public override ISketch SceneToSketch()
         {
