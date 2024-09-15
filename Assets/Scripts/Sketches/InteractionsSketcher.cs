@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Sketches
 {
-    public class InteractionsSketcher : PlacementSketcher
+    public class InteractionsSketcher : ContainerSketcher
     {
         #region PlacementSketcher
 
