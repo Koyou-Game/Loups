@@ -568,6 +568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcePath: 
   terrainsSketcher: {fileID: 1677988311}
+  interactionsSketcher: {fileID: 1456482555}
 --- !u!4 &616315579 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 455354982929894057, guid: bb616c542c3be5842afd3b49a9940300, type: 3}
@@ -1135,6 +1136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1456482554}
+  - component: {fileID: 1456482555}
   m_Layer: 0
   m_Name: Interactions
   m_TagString: Untagged
@@ -1159,6 +1161,19 @@ Transform:
   - {fileID: 2011070535}
   m_Father: {fileID: 597436755}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1456482555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456482553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8b8622afe84af1aa8a23047f8557b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourcePath: 
 --- !u!1 &1660548124
 GameObject:
   m_ObjectHideFlags: 0

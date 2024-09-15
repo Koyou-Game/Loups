@@ -1,4 +1,5 @@
 ﻿using Sketches.Entities;
+using UnityEngine;
 
 namespace Sketches
 {
@@ -16,6 +17,20 @@ namespace Sketches
         }
 
         public override void SketchToScene(ISketch sketch) { }
+
+        #endregion
+
+        #region CheckpointSketcher
+
+        private static CheckpointSketcher sPrefab;
+
+        public static Sketcher Generate(ICheckpointSketch sketch, Transform parent)
+        {
+            sPrefab ??= Resources.Load<CheckpointSketcher>(sketch.ResourcePath);
+
+            var shapeSketcher = Instantiate(sPrefab, sketch.Position, Quaternion.identity, parent);
+            return shapeSketcher;
+        }
 
         #endregion
     }

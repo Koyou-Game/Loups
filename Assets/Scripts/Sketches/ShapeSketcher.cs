@@ -9,18 +9,7 @@ namespace Sketches
     /// </summary>
     public class ShapeSketcher : PlacementSketcher
     {
-        [SerializeField] private static ShapeSketcher sPrefab;
-
-        [SerializeField] private SpriteRenderer sr;
-        [SerializeField] private new Collider2D collider;
-
-        public static Sketcher Generate(IShapeSketch shapeSketch, Transform parent)
-        {
-            sPrefab ??= Resources.Load<ShapeSketcher>(shapeSketch.ResourcePath);
-
-            var shapeSketcher = Instantiate(sPrefab, shapeSketch.Position, Quaternion.identity, parent);
-            return shapeSketcher;
-        }
+        #region PlacementSketcher
 
         public override ISketch SceneToSketch()
         {
@@ -35,5 +24,24 @@ namespace Sketches
         {
             Log.N($"TODO"); // todo
         }
+
+        #endregion
+
+        #region ShapeSketcher
+
+        private static ShapeSketcher sPrefab;
+
+        [SerializeField] private SpriteRenderer sr;
+        [SerializeField] private new Collider2D collider;
+
+        public static Sketcher Generate(IShapeSketch sketch, Transform parent)
+        {
+            sPrefab ??= Resources.Load<ShapeSketcher>(sketch.ResourcePath);
+
+            var shapeSketcher = Instantiate(sPrefab, sketch.Position, Quaternion.identity, parent);
+            return shapeSketcher;
+        }
+
+        #endregion
     }
 }
