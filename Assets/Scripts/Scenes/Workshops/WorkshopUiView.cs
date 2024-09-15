@@ -66,17 +66,20 @@ namespace Scenes.Workshops
 
             public void OnPointerDown(Vector2Int pos, Vector3 positionSnap)
             {
-                Log.N($"Called");
+                // Log.N($"Called");
+                _owner.operatesUiView.SelectedOperateItem?.PointReceiver?.OnPointerDown(pos, positionSnap);
             }
 
             public void OnPointerMove(Vector2Int pos, Vector3 positionSnap)
             {
-                Log.N($"Called");
+                // Log.N($"Called");
+                _owner.operatesUiView.SelectedOperateItem?.PointReceiver?.OnPointerMove(pos, positionSnap);
             }
 
             public void OnPointerUp(Vector2Int pos, Vector3 positionSnap)
             {
-                Log.N($"Called");
+                // Log.N($"Called");
+                _owner.operatesUiView.SelectedOperateItem?.PointReceiver?.OnPointerUp(pos, positionSnap);
             }
 
             #endregion
