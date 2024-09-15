@@ -1,10 +1,12 @@
-﻿using Scenes.Workshops.Components;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Scenes.Workshops
+namespace Scenes.Workshops.Components
 {
-    public class OperatesUiView : MonoBehaviour
+    /// <summary>
+    /// 暂时和 TerrainsPanel 没有区别，后期看是否合并
+    /// </summary>
+    public class InteractionsPanel : MonoBehaviour
     {
         #region MonoBehaviour
 
@@ -13,13 +15,13 @@ namespace Scenes.Workshops
             foreach (var toggle in toggleGroup.ActiveToggles())
             {
                 if (!toggle.isOn) continue;
-                var placementItem = toggle.GetComponent<OperateItem>();
+                var placementItem = toggle.GetComponent<PlacementItem>();
                 if (placementItem == null) continue;
                 toggle.onValueChanged.AddListener(isOn =>
                 {
                     if (isOn)
                     {
-                        SelectedOperateItem = placementItem;
+                        SelectedItem = placementItem;
                     }
                 });
                 break;
@@ -28,22 +30,23 @@ namespace Scenes.Workshops
             foreach (var toggle in toggleGroup.ActiveToggles())
             {
                 if (!toggle.isOn) continue;
-                var placementItem = toggle.GetComponent<OperateItem>();
+                var placementItem = toggle.GetComponent<PlacementItem>();
                 if (placementItem == null) continue;
-                SelectedOperateItem = placementItem;
-                SelectedOperateItem.OnToggle(true);
+                SelectedItem = placementItem;
                 break;
             }
         }
 
         #endregion
 
-        #region OperatesUiView
+        #region TerrainsPanel
 
         [SerializeField]
         private ToggleGroup toggleGroup;
 
-        public OperateItem SelectedOperateItem { get; private set; }
+        // private readonly List<PlacementItem> _placementItems = new();
+
+        public PlacementItem SelectedItem { get; private set; }
 
         #endregion
     }

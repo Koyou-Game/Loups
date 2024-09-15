@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Scenes.Workshops.Components
 {
-    public class TerrainsOperateItem : OperateItem
+    public class InteractionsOperateItem : OperateItem
     {
         #region MonoBehaviour
 
@@ -22,7 +22,7 @@ namespace Scenes.Workshops.Components
         public override void OnToggle(bool isOn)
         {
             base.OnToggle(isOn);
-            terrainsPanel.gameObject.SetActive(isOn);
+            interactionsPanel.gameObject.SetActive(isOn);
         }
 
         #endregion
@@ -30,13 +30,13 @@ namespace Scenes.Workshops.Components
         #region TerrainsOperateItem
 
         [Space] [SerializeField]
-        private TerrainsPanel terrainsPanel;
+        private InteractionsPanel interactionsPanel;
 
         private class PointListener : IndicatorManager.IPointListener
         {
-            private readonly TerrainsOperateItem _owner;
+            private readonly InteractionsOperateItem _owner;
 
-            public PointListener(TerrainsOperateItem owner)
+            public PointListener(InteractionsOperateItem owner)
             {
                 _owner = owner;
             }
@@ -46,7 +46,7 @@ namespace Scenes.Workshops.Components
             public void OnPointerDown(Vector2Int pos, Vector3 positionSnap)
             {
                 // Log.N($"Called");
-                var placementItem = _owner.terrainsPanel.SelectedItem;
+                var placementItem = _owner.interactionsPanel.SelectedItem;
                 if (placementItem != null)
                 {
                     placementItem.PointReceiver?.OnPointerDown(pos, positionSnap);
@@ -56,7 +56,7 @@ namespace Scenes.Workshops.Components
             public void OnPointerMove(Vector2Int pos, Vector3 positionSnap)
             {
                 // Log.N($"Called");
-                var placementItem = _owner.terrainsPanel.SelectedItem;
+                var placementItem = _owner.interactionsPanel.SelectedItem;
                 if (placementItem != null)
                 {
                     placementItem.PointReceiver?.OnPointerMove(pos, positionSnap);
@@ -66,7 +66,7 @@ namespace Scenes.Workshops.Components
             public void OnPointerUp(Vector2Int pos, Vector3 positionSnap)
             {
                 // Log.N($"Called");
-                var placementItem = _owner.terrainsPanel.SelectedItem;
+                var placementItem = _owner.interactionsPanel.SelectedItem;
                 if (placementItem != null)
                 {
                     placementItem.PointReceiver?.OnPointerUp(pos, positionSnap);
