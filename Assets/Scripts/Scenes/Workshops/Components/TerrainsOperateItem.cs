@@ -39,7 +39,7 @@ namespace Scenes.Workshops.Components
 
             public void OnPointerDown(Vector2Int pos, Vector3 positionSnap)
             {
-                Log.N($"Called");
+                // Log.N($"Called");
                 var placementItem = _owner.terrainsPanel.SelectedItem;
                 if (placementItem != null)
                 {
@@ -49,7 +49,7 @@ namespace Scenes.Workshops.Components
 
             public void OnPointerMove(Vector2Int pos, Vector3 positionSnap)
             {
-                Log.N($"Called");
+                // Log.N($"Called");
                 var placementItem = _owner.terrainsPanel.SelectedItem;
                 if (placementItem != null)
                 {
@@ -59,7 +59,7 @@ namespace Scenes.Workshops.Components
 
             public void OnPointerUp(Vector2Int pos, Vector3 positionSnap)
             {
-                Log.N($"Called");
+                // Log.N($"Called");
                 var placementItem = _owner.terrainsPanel.SelectedItem;
                 if (placementItem != null)
                 {
