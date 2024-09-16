@@ -7,3 +7,6 @@
 [submodule "Assets/Dependencies/Koyou/Frameworks"]
 	path = Assets/Dependencies/Koyou/Frameworks
 	url = git@github.com:Koyou-Game/Unity.Frameworks.git
+[submodule "Assets/Dependencies/Koyou/Indicators"]
+	path = Assets/Dependencies/Koyou/Indicators
+	url = git@github.com:Koyou-Game/Unity.Indicators.git

@@ -6,8 +6,10 @@ using UnityEngine;
 
 namespace Sketches
 {
-    public class TerrainsSketcher : ContainerSketcher
+    public class InteractionsSketcher : PlacementSketcher
     {
+        #region PlacementSketcher
+
         public override ISketch SceneToSketch()
         {
             var sketchers = new List<Sketcher>();
@@ -19,7 +21,7 @@ namespace Sketches
                 sketchers.Add(childSketcher);
             }
 
-            return new TerrainsSketch
+            return new InteractionsSketch
             {
                 Sketches = sketchers.Select(sketcher => sketcher.SceneToSketch()).ToList(),
             };
@@ -27,7 +29,7 @@ namespace Sketches
 
         public override void SketchToScene(ISketch sketch)
         {
-            var terrainsSketch = (ITerrainsSketch)sketch;
+            var terrainsSketch = (IInteractionsSketch)sketch;
             var sketches = terrainsSketch.Sketches;
             // // 遍历 root 的直接子物体（不包括更深层次的子物体）
             // foreach (Transform child in transform)
@@ -39,21 +41,23 @@ namespace Sketches
             //     }
             // }
 
-            foreach (var terrainSketch in sketches)
+            foreach (var interactionSketch in sketches)
             {
-                var terrainSketcher = ChileSketchToScene(terrainSketch);
+                var interactionSketcher = ChileSketchToScene(interactionSketch);
             }
         }
 
-        private Sketcher ChileSketchToScene(ISketch terrainSketch)
+        private Sketcher ChileSketchToScene(ISketch interactionSketch)
         {
-            switch (terrainSketch)
+            switch (interactionSketch)
             {
-                case IShapeSketch shapeSketch:
-                    return ShapeSketcher.Generate(shapeSketch, transform);
+                case ICheckpointSketch checkpointSketch:
+                    return CheckpointSketcher.Generate(checkpointSketch, transform);
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(terrainSketch));
+                    throw new ArgumentOutOfRangeException(nameof(interactionSketch));
             }
         }
+
+        #endregion
     }
 }

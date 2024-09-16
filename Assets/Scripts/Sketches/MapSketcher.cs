@@ -7,12 +7,19 @@ namespace Sketches
     {
         #region PlacementSketcher
 
-        public override ISketch ToSketch()
+        public override ISketch SceneToSketch()
         {
             return new MapSketch
             {
-                TerrainsSketch = (ITerrainsSketch)terrainsSketcher.ToSketch(),
+                TerrainsSketch = (ITerrainsSketch)terrainsSketcher.SceneToSketch(),
+                InteractionsSketch = (IInteractionsSketch)interactionsSketcher.SceneToSketch()
             };
+        }
+
+        public override void SketchToScene(ISketch sketch)
+        {
+            terrainsSketcher.SketchToScene(((IMapSketch)sketch).TerrainsSketch);
+            interactionsSketcher.SketchToScene(((IMapSketch)sketch).InteractionsSketch);
         }
 
         #endregion
@@ -20,6 +27,7 @@ namespace Sketches
         #region MapSketcher
 
         [SerializeField] private TerrainsSketcher terrainsSketcher;
+        [SerializeField] private InteractionsSketcher interactionsSketcher;
 
         #endregion
     }

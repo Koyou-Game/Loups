@@ -8,12 +8,17 @@ namespace Scenes.Workshops
     {
         #region Sketcher
 
-        public override ISketch ToSketch()
+        public override ISketch SceneToSketch()
         {
             return new LevelSketch
             {
-                MapSketch = (IMapSketch)mapSketcher.ToSketch(),
+                MapSketch = (IMapSketch)mapSketcher.SceneToSketch(),
             };
+        }
+
+        public override void SketchToScene(ISketch sketch)
+        {
+            mapSketcher.SketchToScene(((ILevelSketch)sketch).MapSketch);
         }
 
         #endregion

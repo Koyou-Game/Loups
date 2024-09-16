@@ -33,5 +33,14 @@ namespace Storages
 
             return levelPath;
         }
+
+        public static ILevelSketch Load(string path)
+        {
+            if (!File.Exists(path)) return null;
+            var json = File.ReadAllText(path);
+            Log.N($"json:{json}");
+            var levelSketch = JsonUtil.DeserializeObject<LevelSketch>(json);
+            return levelSketch;
+        }
     }
 }
