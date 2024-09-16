@@ -2,6 +2,8 @@
 
 ```
 git clone --recurse-submodules git@github.com:Koyou-Game/Loups.git
+
+git submodule update --init --recursive
 ```
 
 # 架构设计
