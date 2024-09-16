@@ -7,6 +7,8 @@ namespace Storages
 {
     public static class LevelRepository
     {
+        public static string StoriesPath => Path.Combine(Application.persistentDataPath, "Stories");
+
         /// <summary>
         /// 
         /// </summary>
@@ -17,7 +19,7 @@ namespace Storages
         public static string Save(ILevelSketch sketch, string story, string level)
         {
             // 构建文件路径
-            var directoryPath = Path.Combine(Application.persistentDataPath, story);
+            var directoryPath = Path.Combine(StoriesPath, story);
             var levelPath = Path.Combine(directoryPath, $"{level}.json");
             Log.N($"directoryPath:\t{directoryPath}");
             Log.N($"levelPath:\t{levelPath}");
